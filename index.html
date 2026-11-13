@@ -1,0 +1,431 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0a1f44">
+  <title>Omile Peter Nkwaonye | IT Professional & Software Developer</title>
+  <meta name="description" content="Omile Peter Nkwaonye is a Nigerian IT professional, software developer and ICT trainer with experience in software education, banking technology support and business development.">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Omile Peter Nkwaonye | IT Professional & Software Developer">
+  <meta property="og:description" content="IT professional, software developer and ICT trainer with experience across software education, ATM/POS support and business development.">
+  <meta property="og:image" content="">
+  <meta name="color-scheme" content="light dark">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    /* Change the full palette here. */
+    :root {
+      color-scheme: light;
+      --navy: #0A1F44;
+      --midnight: #07152f;
+      --royal: #1E4FD8;
+      --sky: #8FB8FF;
+      --ice: #E8F1FF;
+      --cyan: #00D4FF;
+      --aqua: #38BDF8;
+      --amber: #F5B942;
+      --page: #f6f9ff;
+      --surface: #ffffff;
+      --surface-2: #edf4ff;
+      --text: #12213d;
+      --muted: #52627d;
+      --border: #cfddf3;
+      --shadow: 0 18px 50px rgba(10,31,68,.09);
+      --header: rgba(246,249,255,.88);
+      --radius: 22px;
+    }
+    [data-theme="dark"] {
+      color-scheme: dark;
+      --page: #08162e;
+      --surface: #0d2040;
+      --surface-2: #11284e;
+      --text: #eff5ff;
+      --muted: #b7c7e2;
+      --border: #25416b;
+      --shadow: 0 18px 50px rgba(0,0,0,.24);
+      --header: rgba(8,22,46,.88);
+      --ice: #10264b;
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; scroll-padding-top: 92px; }
+    body { margin: 0; background: var(--page); color: var(--text); font-family: "DM Sans", sans-serif; line-height: 1.65; transition: background .25s, color .25s; }
+    h1,h2,h3,h4 { font-family: Manrope, sans-serif; line-height: 1.15; letter-spacing: -.035em; }
+    a { color: inherit; transition: color .2s ease, transform .2s ease, filter .2s ease; }
+    button, input, textarea { font: inherit; }
+    button:focus-visible, a:focus-visible, input:focus-visible, textarea:focus-visible { outline: 3px solid var(--cyan); outline-offset: 3px; }
+    .skip-link { position: absolute; z-index: 100; top: -60px; left: 12px; padding: 10px 14px; background: var(--surface); color: var(--text); }
+    .skip-link:focus { top: 12px; }
+    .container { width: min(1120px, calc(100% - 40px)); margin-inline: auto; }
+    .site-header { position: sticky; z-index: 20; top: 0; backdrop-filter: blur(16px); background: var(--header); border-bottom: 1px solid color-mix(in srgb, var(--border) 75%, transparent); }
+    .nav-wrap { min-height: 72px; display: flex; align-items: center; justify-content: space-between; gap: 18px; }
+    .brand { display: inline-flex; gap: 10px; align-items: center; text-decoration: none; color: var(--text); font: 800 14px Manrope,sans-serif; letter-spacing: .02em; white-space: nowrap; }
+    .brand-mark { display: grid; place-items: center; width: 36px; height: 36px; border-radius: 12px; color: #061936; background: linear-gradient(135deg,var(--cyan),var(--sky)); }
+    .nav-links { display: flex; align-items: center; gap: clamp(10px,2vw,26px); margin: 0; padding: 0; list-style: none; }
+    .nav-links a { text-decoration: none; color: var(--muted); font-size: 13px; font-weight: 700; transition: color .2s, transform .2s; }
+    .nav-links a:hover,.nav-links a.active { color: var(--royal); }
+    [data-theme="dark"] .nav-links a:hover,[data-theme="dark"] .nav-links a.active { color: var(--cyan); }
+    .theme-toggle { border: 1px solid var(--border); background: var(--surface); color: var(--text); border-radius: 999px; padding: 9px 12px; cursor: pointer; font-size: 13px; font-weight: 700; white-space: nowrap; }
+    .hero { position: relative; overflow: hidden; color: #f6f9ff; background: radial-gradient(ellipse at 83% 15%, rgba(0,212,255,.2), transparent 34%), radial-gradient(ellipse at 5% 100%, rgba(30,79,216,.48), transparent 48%), linear-gradient(125deg,var(--midnight),var(--navy) 58%,#0c3475); }
+    .hero::after { content: ""; position: absolute; width: 440px; height: 440px; right: -180px; bottom: -260px; border: 1px solid rgba(143,184,255,.24); border-radius: 50%; box-shadow: 0 0 0 45px rgba(143,184,255,.045),0 0 0 90px rgba(143,184,255,.03); pointer-events: none; }
+    .hero-inner { position: relative; z-index: 1; min-height: 540px; display: grid; grid-template-columns: 1.2fr .8fr; align-items: center; gap: 54px; padding-block: 92px 100px; }
+    .eyebrow,.section-kicker { color: var(--aqua); text-transform: uppercase; letter-spacing: .16em; font-size: 11px; font-weight: 800; }
+    .hero h1 { max-width: 750px; margin: 14px 0 12px; font-size: clamp(42px,7vw,78px); }
+    .hero h1 span { color: var(--sky); }
+    .hero h2 { margin: 0; max-width: 690px; color: #d3e4ff; font: 600 clamp(17px,2.3vw,24px)/1.45 "DM Sans",sans-serif; letter-spacing: 0; }
+    .hero-intro { max-width: 640px; color: #c2d4f1; font-size: 16px; margin: 21px 0 30px; }
+    .actions { display: flex; flex-wrap: wrap; gap: 12px; }
+    .button { display: inline-flex; align-items: center; justify-content: center; gap: 9px; min-height: 48px; padding: 12px 20px; border: 1px solid transparent; border-radius: 12px; font-weight: 800; text-decoration: none; transition: transform .2s, box-shadow .2s, background .2s; }
+    .button:hover { transform: translateY(-2px); }
+    .button-primary { color: #061936; background: var(--cyan); box-shadow: 0 8px 25px rgba(0,212,255,.18); }
+    .button-primary:hover { background: #55e2ff; box-shadow: 0 12px 28px rgba(0,212,255,.27); }
+    .button-secondary { color: #f6f9ff; border-color: rgba(143,184,255,.55); background: rgba(255,255,255,.06); }
+    .button-secondary:hover { background: rgba(255,255,255,.13); }
+    .hero-card { justify-self: end; width: min(100%,340px); padding: 27px; border: 1px solid rgba(143,184,255,.28); border-radius: 24px; background: linear-gradient(155deg,rgba(255,255,255,.11),rgba(255,255,255,.035)); box-shadow: 0 28px 70px rgba(0,0,0,.2); }
+    .profile-photo { display: block; width: 100%; height: 245px; object-fit: cover; object-position: center 20%; border-radius: 16px; border: 1px solid rgba(143,184,255,.28); }
+    .monogram { display: grid; place-items: center; width: 74px; height: 74px; border: 1px solid rgba(0,212,255,.5); border-radius: 22px; background: linear-gradient(135deg,rgba(0,212,255,.2),rgba(30,79,216,.3)); color: var(--cyan); font: 800 26px Manrope,sans-serif; }
+    .hero-card h3 { margin: 22px 0 5px; font-size: 21px; }
+    .hero-card p { color: #bdd0ed; font-size: 14px; margin: 0; }
+    .quick-facts { display: grid; gap: 12px; margin-top: 22px; padding-top: 19px; border-top: 1px solid rgba(143,184,255,.22); }
+    .quick-fact { display: flex; gap: 10px; color: #d7e5f8; font-size: 13px; }
+    .quick-fact b { color: var(--cyan); font-weight: 700; }
+    main section { position: relative; padding: 94px 0; }
+    .section-heading { margin-bottom: 36px; max-width: 690px; }
+    .section-kicker { color: var(--royal); }
+    [data-theme="dark"] .section-kicker { color: var(--cyan); }
+    .section-heading h2 { display: inline-block; position: relative; margin: 8px 0 12px; font-size: clamp(32px,4vw,46px); }
+    .section-heading h2::after { content: ""; display: block; height: 3px; width: 52%; margin-top: 11px; border-radius: 9px; background: linear-gradient(90deg,var(--royal),var(--cyan)); box-shadow: 0 0 14px rgba(0,212,255,.25); }
+    .section-heading p { color: var(--muted); margin: 0; }
+    .about-grid { display: grid; grid-template-columns: 1.3fr .7fr; gap: 24px; align-items: stretch; }
+    .panel { padding: 30px; border: 1px solid var(--border); border-radius: var(--radius); background: var(--surface); box-shadow: var(--shadow); }
+    .about-copy { font-size: 16px; color: var(--muted); margin: 0; }
+    .about-copy strong { color: var(--text); }
+    .about-aside { display: grid; align-content: center; gap: 19px; background: linear-gradient(145deg,var(--surface),var(--ice)); }
+    .stat { display: flex; gap: 15px; align-items: center; }
+    .stat-icon { flex: 0 0 42px; height: 42px; display: grid; place-items: center; border-radius: 13px; color: var(--royal); background: var(--ice); font-size: 18px; font-weight: 800; }
+    [data-theme="dark"] .stat-icon { color: var(--cyan); }
+    .stat div:last-child { color: var(--muted); font-size: 12px; }
+    .stat b { display: block; color: var(--text); font-size: 14px; }
+    .skills-section,.projects-section { background: linear-gradient(180deg,transparent 0,rgba(143,184,255,.07) 30%,rgba(143,184,255,.07) 75%,transparent 100%); }
+    .skill-grid { display: grid; grid-template-columns: repeat(4,1fr); gap: 16px; }
+    .skill-card { padding: 23px; border: 1px solid var(--border); border-radius: 18px; background: var(--surface); box-shadow: var(--shadow); }
+    .skill-card h3 { display: flex; gap: 10px; align-items: center; margin: 0 0 17px; font-size: 16px; }
+    .skill-card h3 span { color: var(--royal); }
+    [data-theme="dark"] .skill-card h3 span { color: var(--cyan); }
+    .tags { display: flex; flex-wrap: wrap; gap: 8px; }
+    .tag { display: inline-block; padding: 6px 10px; border: 1px solid color-mix(in srgb,var(--sky) 55%,var(--border)); border-radius: 999px; color: var(--navy); background: var(--ice); font-size: 12px; font-weight: 700; }
+    [data-theme="dark"] .tag { color: #e5f1ff; background: #102b53; border-color: #285283; }
+    .timeline { position: relative; margin-left: 9px; padding-left: 31px; border-left: 2px solid var(--border); }
+    .timeline-item { position: relative; margin-bottom: 20px; }
+    .timeline-item:last-child { margin-bottom: 0; }
+    .timeline-item::before { content: ""; position: absolute; left: -40px; top: 28px; width: 16px; height: 16px; border: 4px solid var(--page); border-radius: 50%; background: var(--royal); box-shadow: 0 0 0 2px var(--cyan),0 0 18px rgba(0,212,255,.35); }
+    [data-theme="dark"] .timeline-item::before { background: var(--cyan); }
+    .job { padding: 23px 26px; }
+    .job-top { display: flex; justify-content: space-between; align-items: flex-start; gap: 16px; }
+    .job h3 { margin: 0 0 6px; font-size: 19px; }
+    .job-org { color: var(--royal); font-weight: 800; font-size: 14px; }
+    [data-theme="dark"] .job-org { color: var(--cyan); }
+    .job-location { color: var(--muted); font-size: 13px; }
+    .job-date { flex: none; padding: 6px 11px; border-radius: 999px; color: var(--royal); background: var(--ice); font-size: 12px; font-weight: 800; }
+    [data-theme="dark"] .job-date { color: var(--cyan); }
+    .job ul { color: var(--muted); padding-left: 19px; margin: 15px 0 0; font-size: 14px; }
+    .job li { padding-left: 3px; margin: 5px 0; }
+    .job li::marker { color: var(--aqua); }
+    .edu-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 25px; }
+    .edu-card h3 { margin: 0 0 20px; font-size: 19px; }
+    .edu-list { list-style: none; margin: 0; padding: 0; }
+    .edu-list li { position: relative; padding: 0 0 19px 23px; border-left: 1px solid var(--border); color: var(--muted); font-size: 14px; }
+    .edu-list li:last-child { padding-bottom: 0; border-left-color: transparent; }
+    .edu-list li::before { content: ""; position: absolute; left: -5px; top: 6px; width: 9px; height: 9px; border-radius: 50%; background: var(--royal); box-shadow: 0 0 0 3px var(--ice); }
+    [data-theme="dark"] .edu-list li::before { background: var(--cyan); }
+    .edu-list b { display: block; color: var(--text); font-size: 14px; }
+    .edu-year { color: var(--royal); font-size: 12px; font-weight: 800; }
+    [data-theme="dark"] .edu-year { color: var(--cyan); }
+    .project-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 18px; }
+    .slideshow { max-width: 720px; margin-inline: auto; }
+    .slides-window { overflow: hidden; border-radius: 22px; }
+    .slides-track { display: flex; transition: transform .55s cubic-bezier(.22,.75,.28,1); will-change: transform; }
+    .slide { flex: 0 0 100%; min-width: 0; }
+    .slide .project-card { min-height: 260px; }
+    .slideshow-controls { display: flex; align-items: center; justify-content: center; gap: 12px; margin-top: 18px; }
+    .slide-control { display: inline-grid; place-items: center; min-width: 42px; min-height: 42px; border: 1px solid var(--border); border-radius: 12px; background: var(--surface); color: var(--text); font-size: 17px; cursor: pointer; transition: transform .2s, border-color .2s, background .2s; }
+    .slide-control:hover { transform: translateY(-2px); border-color: var(--sky); background: var(--ice); }
+    .slide-dots { display: flex; align-items: center; gap: 7px; }
+    .slide-dot { width: 9px; height: 9px; padding: 0; border: 0; border-radius: 99px; background: var(--sky); cursor: pointer; transition: width .2s, background .2s; }
+    .slide-dot[aria-current="true"] { width: 25px; background: var(--royal); }
+    [data-theme="dark"] .slide-dot[aria-current="true"] { background: var(--cyan); }
+    .slide-status { min-width: 48px; color: var(--muted); font-size: 12px; text-align: center; font-weight: 700; }
+    .project-link:hover, footer a:hover, .contact-line a:hover { transform: translateY(-2px); text-decoration: underline; text-decoration-color: var(--cyan); text-underline-offset: 4px; }
+    .project-card { display: flex; min-height: 230px; flex-direction: column; justify-content: space-between; padding: 26px; border: 1px solid var(--border); border-radius: 20px; background: var(--surface); box-shadow: var(--shadow); transition: transform .2s,border-color .2s; }
+    .project-card:hover { transform: translateY(-4px); border-color: var(--sky); }
+    .project-topline { display: flex; align-items: center; justify-content: space-between; }
+    .project-icon { width: 43px; height: 43px; display: grid; place-items: center; color: var(--royal); background: var(--ice); border-radius: 13px; font-size: 20px; font-weight: 800; }
+    [data-theme="dark"] .project-icon { color: var(--cyan); }
+    .project-year { color: var(--muted); font-size: 12px; font-weight: 800; }
+    .project-card h3 { margin: 19px 0 8px; font-size: 20px; }
+    .project-card p { color: var(--muted); font-size: 14px; margin: 0 0 15px; }
+    .project-link { color: var(--royal); text-decoration: none; font-weight: 800; font-size: 13px; }
+    [data-theme="dark"] .project-link { color: var(--cyan); }
+    .placeholder { border-style: dashed; background: color-mix(in srgb,var(--surface) 62%,transparent); }
+    .placeholder .project-icon { color: var(--muted); background: var(--surface-2); }
+    .placeholder-note { color: var(--muted); font-size: 12px; font-weight: 700; }
+    .contact-section { color: #f5f8ff; background: radial-gradient(ellipse at 87% 0,rgba(0,212,255,.18),transparent 37%),linear-gradient(125deg,var(--midnight),var(--navy)); }
+    .contact-section .section-kicker { color: var(--cyan); }
+    .contact-section .section-heading h2 { color: #fff; }
+    .contact-section .section-heading p { color: #bdcde5; }
+    .contact-grid { display: grid; grid-template-columns: .85fr 1.15fr; gap: 24px; }
+    .contact-details { display: grid; gap: 13px; align-content: start; }
+    .contact-line { display: flex; align-items: center; gap: 14px; padding: 16px; border: 1px solid rgba(143,184,255,.22); border-radius: 15px; background: rgba(255,255,255,.045); }
+    .contact-line .icon { flex: 0 0 40px; height: 40px; display: grid; place-items: center; border-radius: 12px; color: var(--cyan); background: rgba(0,212,255,.1); }
+    .contact-line small { display: block; color: #9eb3d3; font-size: 11px; font-weight: 800; text-transform: uppercase; letter-spacing: .08em; }
+    .contact-line a,.contact-line strong { color: #f3f7ff; text-decoration: none; font-weight: 700; overflow-wrap: anywhere; }
+    .contact-form { padding: 25px; border: 1px solid rgba(143,184,255,.24); border-radius: 20px; background: rgba(255,255,255,.065); }
+    .form-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+    .field { display: grid; gap: 6px; }
+    .field-wide { grid-column: 1/-1; }
+    .field label { color: #d5e2f5; font-size: 12px; font-weight: 800; }
+    .field input,.field textarea { width: 100%; padding: 12px 13px; border: 1px solid rgba(143,184,255,.3); border-radius: 10px; background: rgba(5,19,43,.44); color: #fff; }
+    .field input::placeholder,.field textarea::placeholder { color: #9badc9; }
+    .field textarea { resize: vertical; min-height: 112px; }
+    .contact-form .button { margin-top: 15px; border: 0; cursor: pointer; }
+    .form-note { margin: 11px 0 0; color: #bdcde5; font-size: 12px; }
+    .social-links { display: flex; gap: 10px; flex-wrap: wrap; margin-top: 6px; }
+    .social-placeholder { display: inline-flex; gap: 6px; align-items: center; padding: 8px 11px; border: 1px dashed rgba(143,184,255,.4); border-radius: 999px; color: #c9d8ec; font-size: 12px; }
+    footer { padding: 24px 0; color: #b8c8e2; background: #06132a; font-size: 13px; }
+    .footer-row { display: flex; align-items: center; justify-content: space-between; gap: 15px; }
+    footer p { margin: 0; }
+    footer a { color: var(--cyan); text-decoration: none; font-weight: 800; }
+    .reveal { opacity: 0; transform: translateY(16px); transition: opacity .6s ease,transform .6s ease; }
+    .reveal.visible { opacity: 1; transform: none; }
+    @media (prefers-reduced-motion: reduce) { *,*::before,*::after { scroll-behavior: auto !important; animation-duration: .01ms !important; transition-duration: .01ms !important; } .reveal { opacity: 1; transform: none; } }
+    @media (max-width: 900px) { .nav-links { gap: 12px; } .nav-links a { font-size: 12px; } .hero-inner { grid-template-columns: 1fr .65fr; gap: 25px; } .skill-grid { grid-template-columns: repeat(2,1fr); } }
+    @media (max-width: 700px) { .container { width: min(100% - 30px,560px); } .nav-wrap { min-height: 64px; flex-wrap: wrap; padding: 9px 0; } .brand { font-size: 13px; } .nav-links { order: 3; width: 100%; overflow-x: auto; padding: 3px 0 5px; scrollbar-width: none; } .nav-links::-webkit-scrollbar { display:none; } .nav-links a { white-space: nowrap; } .hero-inner { min-height: unset; grid-template-columns: 1fr; padding: 76px 0 70px; } .hero-card { display: block; justify-self: start; width: min(100%,390px); } .profile-photo { height: 290px; } .hero h1 { font-size: clamp(42px,13vw,66px); } main section { padding: 70px 0; } .about-grid,.edu-grid,.contact-grid { grid-template-columns: 1fr; } .about-aside { grid-template-columns: 1fr 1fr; } .skill-grid { grid-template-columns: 1fr 1fr; gap: 10px; } .skill-card { padding: 17px; } .skill-card h3 { align-items: flex-start; font-size: 14px; } .job { padding: 19px; } .job-top { display: block; } .job-date { display: inline-block; margin-top: 12px; } .project-grid { grid-template-columns: 1fr; } .project-card { min-height: 195px; } .slide .project-card { min-height: 230px; } .form-grid { grid-template-columns: 1fr; } .field-wide { grid-column: auto; } .footer-row { align-items: flex-start; flex-direction: column; } }
+    @media (max-width: 390px) { .theme-toggle { padding: 8px 9px; font-size: 11px; } .brand { font-size: 12px; } .skill-grid,.about-aside { grid-template-columns: 1fr; } }
+  </style>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <div class="container nav-wrap">
+      <a class="brand" href="#top" aria-label="Omile Peter Nkwaonye, home"><span class="brand-mark" aria-hidden="true">OP</span><span>OMILE PETER NKWAONYE</span></a>
+      <nav aria-label="Main navigation">
+        <ul class="nav-links">
+          <li><a href="#about">About</a></li><li><a href="#skills">Skills</a></li><li><a href="#experience">Experience</a></li><li><a href="#education">Education</a></li><li><a href="#projects">Projects</a></li><li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+      <button class="theme-toggle" id="themeToggle" type="button" aria-label="Switch to dark mode">☾ Dark</button>
+    </div>
+  </header>
+  <main id="main">
+    <section class="hero" id="top" aria-labelledby="hero-title">
+      <div class="container hero-inner">
+        <div>
+          <div class="eyebrow">IT Professional · Software Developer · ICT Trainer</div>
+          <h1 id="hero-title">Omile Peter <span>Nkwaonye</span></h1>
+          <h2>Technology support, software development and learning that moves people forward.</h2>
+          <p class="hero-intro">I’m a Computer Science graduate with more than ten years of experience across ICT training, web and Java development, and banking technology support. I help teams and learners solve practical technology challenges with clear communication and hands-on experience.</p>
+          <div class="actions">
+            <!-- Keep cv.pdf beside this HTML file, or update this path to your hosted CV. -->
+            <a class="button button-primary" href="cv.pdf" download>↓ Download CV</a>
+            <a class="button button-secondary" href="#contact">Contact Me <span aria-hidden="true">↗</span></a>
+          </div>
+        </div>
+        <aside class="hero-card" aria-label="Profile photo and highlights">
+          <!-- Replace portrait.jpg to use a newer profile photo. -->
+          <img class="profile-photo" src="portrait.jpg" alt="Portrait of Omile Peter Nkwaonye in a navy suit">
+          <h3>Technology with a human touch.</h3>
+          <p>Development · Support · Training · Business</p>
+          <div class="quick-facts">
+            <div class="quick-fact"><b>01</b><span>Computer Science graduate</span></div>
+            <div class="quick-fact"><b>02</b><span>Banking technology support</span></div>
+            <div class="quick-fact"><b>03</b><span>Programming and ICT instruction</span></div>
+          </div>
+        </aside>
+      </div>
+    </section>
+    <section id="about" aria-labelledby="about-title">
+      <div class="container">
+        <div class="section-heading reveal"><div class="section-kicker">About</div><h2 id="about-title">A practical, people-first IT professional</h2><p>A career built across the classroom, the service desk and business-facing technology.</p></div>
+        <div class="about-grid reveal">
+          <article class="panel"><p class="about-copy">I’m an IT professional and Computer Science graduate with more than ten years of experience in software development, technology support and ICT education. I’ve taught Java programming, web design and web development at NIIT, guided learners through hands-on projects, and led a faculty team while continuing to teach. My technical support work includes maintaining computer hardware and resolving ATM and POS hardware, software and connectivity faults for banking operations. I’ve also supported business growth by selling POS terminals and maintaining client relationships. Across these roles, I bring a practical approach, clear communication and a commitment to helping people use technology with confidence.</p></article>
+          <aside class="panel about-aside" aria-label="Professional overview">
+            <div class="stat"><div class="stat-icon" aria-hidden="true">⌘</div><div><b>Software & web</b>Java, web development and SQL Server</div></div>
+            <div class="stat"><div class="stat-icon" aria-hidden="true">▣</div><div><b>Technology support</b>ATM/POS and computer hardware</div></div>
+            <div class="stat"><div class="stat-icon" aria-hidden="true">◎</div><div><b>ICT education</b>Instruction, facilitation and mentoring</div></div>
+          </aside>
+        </div>
+      </div>
+    </section>
+    <section class="skills-section" id="skills" aria-labelledby="skills-title">
+      <div class="container">
+        <div class="section-heading reveal"><div class="section-kicker">Skills</div><h2 id="skills-title">Tools I work with</h2><p>Skills and technologies listed in my CV, grouped by focus area.</p></div>
+        <div class="skill-grid reveal">
+          <article class="skill-card"><h3><span aria-hidden="true">⌘</span> Programming &amp; Web</h3><div class="tags"><span class="tag">Java</span><span class="tag">JavaFX</span><span class="tag">Spring &amp; Hibernate</span><span class="tag">C#</span><span class="tag">PHP</span><span class="tag">HTML</span><span class="tag">CSS</span><span class="tag">JSON</span><span class="tag">JavaScript</span></div></article>
+          <article class="skill-card"><h3><span aria-hidden="true">▤</span> Databases</h3><div class="tags"><span class="tag">Microsoft SQL Server </span><span class="tag">MySQL Database</span></div></article>
+          <article class="skill-card"><h3><span aria-hidden="true">✎</span> Design Tools</h3><div class="tags"><span class="tag">Photoshop</span><span class="tag">InDesign</span><span class="tag">Illustrator</span><span class="tag">Flash</span><span class="tag">CorelDRAW</span><span class="tag">AutoCAD</span></div></article>
+          <article class="skill-card"><h3><span aria-hidden="true">⌁</span> IT Support &amp; Maintenance</h3><div class="tags"><span class="tag">ATM/POS support</span><span class="tag">Hardware maintenance</span><span class="tag">Computer engineering</span></div></article>
+          <article class="skill-card"><h3><span aria-hidden="true">◎</span> Management Tools</h3><div class="tags"><span class="tag">Asana</span><span class="tag">Todo</span><span class="tag">Microsoft Office</span></div></article>
+           <article class="skill-card"><h3><span aria-hidden="true">▣</span> Other Professional Tools</h3><div class="tags"><span class="tag">Data labeling with Label-Studio</span><span class="tag">N8N Automation</span><span class="tag">Docker</span><span class="tag">GitHub</span></div></article>
+        </div>
+      </div>
+    </section>
+    <section id="experience" aria-labelledby="experience-title">
+      <div class="container">
+        <div class="section-heading reveal"><div class="section-kicker">Experience</div><h2 id="experience-title">Where I’ve made a difference</h2><p>Experience across business development, banking systems, software education and computer support.</p></div>
+        <div class="timeline reveal">
+          <article class="timeline-item"><div class="panel job"><div class="job-top"><div><h3>Business Developer</h3><div class="job-org">OPay Microfinance Bank</div><div class="job-location">Asaba, Delta State</div></div><span class="job-date">2025 – 2026</span></div><ul><li>Sold POS terminals to businesses and merchants, managing customer relationships through the sales process.</li><li>Maintained client relationships to support retention and repeat business.</li></ul></div></article>
+          <article class="timeline-item"><div class="panel job"><div class="job-top"><div><h3>IT Resource Person (ATM &amp; POS)</h3><div class="job-org">Polaris Bank Limited</div><div class="job-location">Asaba, Delta State · South-South ATM/POS unit</div></div><span class="job-date">2020 – 2025</span></div><ul><li>Provided technical support for the bank’s ATM and POS systems.</li><li>Diagnosed and resolved hardware, software and connectivity faults to help keep customer-facing channels available.</li></ul></div></article>
+          <article class="timeline-item"><div class="panel job"><div class="job-top"><div><h3>Faculty: Java Programming, Web Design &amp; Web Development</h3><div class="job-org">NIIT Training Center</div><div class="job-location">Onitsha, Anambra State</div></div><span class="job-date">2017 – 2020</span></div><ul><li>Delivered classroom instruction in Java programming, web design and web development to students and professionals.</li><li>Guided learners through practical projects and assessed their progress.</li></ul></div></article>
+          <article class="timeline-item"><div class="panel job"><div class="job-top"><div><h3>Computer Class Teacher &amp; Lab Instructor</h3><div class="job-org">National Youth Service Corps (NYSC)</div><div class="job-location">Nigeria</div></div><span class="job-date">2016 – 2017</span></div><ul><li>Taught computer studies and ran the computer laboratory.</li><li>Served as Secretary of the Exams and Records Committee.</li></ul></div></article>
+          <article class="timeline-item"><div class="panel job"><div class="job-top"><div><h3>Head of Faculties</h3><div class="job-org">NIIT Training Center</div><div class="job-location">Asaba, Delta State</div></div><span class="job-date">2015 – 2016</span></div><ul><li>Led the faculty team while teaching Java programming, the Adobe suite and AutoCAD design.</li></ul></div></article>
+          <article class="timeline-item"><div class="panel job"><div class="job-top"><div><h3>Personal Secretary to the Managing Director &amp; Computer Specialist</h3><div class="job-org">Chikachikwu Farms/Hatchery</div><div class="job-location">Ogwashi-Uku, Delta State</div></div><span class="job-date">2012 – 2013</span></div><ul><li>Provided administrative support to the Managing Director.</li><li>Handled the company’s computer needs.</li></ul></div></article>
+          <article class="timeline-item"><div class="panel job"><div class="job-top"><div><h3>IT Instructor – Hardware Maintenance &amp; Lab</h3><div class="job-org">JD Computer College</div><div class="job-location">Ogwashi-Uku, Delta State</div></div><span class="job-date">2011</span></div><ul><li>Maintained computer hardware and instructed learners in the computer laboratory.</li></ul></div></article>
+        </div>
+      </div>
+    </section>
+    <section class="skills-section" id="education" aria-labelledby="education-title">
+      <div class="container">
+        <div class="section-heading reveal"><div class="section-kicker">Education &amp; Training</div><h2 id="education-title">A foundation in computing</h2><p>Formal education, technical diplomas and additional training from my CV.</p></div>
+        <div class="edu-grid reveal">
+          <article class="panel edu-card"><h3>Education</h3><ul class="edu-list"><li><span class="edu-year">2015</span><b>BSc Computer Science</b>Delta State University, Abraka, Nigeria</li><li><span class="edu-year">2011</span><b>Diploma in Computer Programming (Java)</b>NIIT Nigeria</li><li><span class="edu-year">2011</span><b>Diploma in Computer Maintenance (Engineering)</b></li><li><span class="edu-year">2010</span><b>Certificate in Computer Appreciation</b></li><li><span class="edu-year">2009</span><b>Senior Secondary School Certificate (WAEC)</b>Model Link Comprehensive College, Benin City, Nigeria</li></ul></article>
+          <article class="panel edu-card"><h3>Relevant Training</h3><ul class="edu-list"><li><span class="edu-year">2013</span><b>MOW Citizenship and Leadership Training Course</b></li></ul><p style="color:var(--muted);font-size:14px;margin-top:22px">English — professional working proficiency, as listed in my CV.</p></article>
+        </div>
+      </div>
+    </section>
+    <section class="projects-section" id="projects" aria-labelledby="projects-title">
+      <div class="container">
+        <div class="section-heading reveal"><div class="section-kicker">Projects</div><h2 id="projects-title">Selected work</h2><p>A project contribution, with space to add more examples over time.</p></div>
+        <div class="slideshow reveal" aria-label="Project slideshow">
+          <div class="slides-window" id="slidesWindow"><div class="slides-track" id="slidesTrack">
+            <div class="slide"><article class="project-card"><div><div class="project-topline"><span class="project-icon" aria-hidden="true">⌁</span><span class="project-year">2026</span></div><h3>Vessel Management Platform</h3><p>Member of the development and deployment team for the sailpulse.com vessel-management platform.</p></div><a class="project-link" href="https://sailpulse.com" target="_blank" rel="noopener noreferrer">Visit sailpulse.com ↗</a></article></div>
+            <div class="slide"><article class="project-card placeholder"><div><div class="project-topline"><span class="project-icon" aria-hidden="true">＋</span><span class="placeholder-note">Add project</span></div><h3>Project title</h3><p>Replace this card with a brief description of a project, your contribution and the tools used.</p></div><span class="placeholder-note">Placeholder for future work</span></article></div>
+            <div class="slide"><article class="project-card placeholder"><div><div class="project-topline"><span class="project-icon" aria-hidden="true">＋</span><span class="placeholder-note">Add project</span></div><h3>Project title</h3><p>Use this space for another project case study or a practical result you’d like to share.</p></div><span class="placeholder-note">Placeholder for future work</span></article></div>
+          </div></div>
+          <div class="slideshow-controls" aria-label="Slideshow controls">
+            <button class="slide-control" id="previousSlide" type="button" aria-label="Previous project">←</button>
+            <div class="slide-dots" id="slideDots" aria-label="Choose a project"></div><span class="slide-status" id="slideStatus" aria-live="polite">1 / 3</span>
+            <button class="slide-control" id="nextSlide" type="button" aria-label="Next project">→</button>
+            <button class="slide-control" id="pauseSlides" type="button" aria-label="Pause slideshow" aria-pressed="false">Ⅱ</button>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="contact-section" id="contact" aria-labelledby="contact-title">
+      <div class="container">
+        <div class="section-heading reveal"><div class="section-kicker">Contact</div><h2 id="contact-title">Let’s talk about what you need</h2><p>Reach out about IT, software development, training or technical support opportunities.</p></div>
+        <div class="contact-grid reveal">
+          <div class="contact-details">
+            <!-- Replace these contact details if they change. -->
+            <div class="contact-line"><span class="icon" aria-hidden="true">@</span><div><small>Email</small><a href="mailto:Omilepeter24@gmail.com">Omilepeter24@gmail.com</a></div></div>
+            <div class="contact-line"><span class="icon" aria-hidden="true">☎</span><div><small>Phone</small><a href="tel:+2347066851942">+234 706 685 1942</a></div></div>
+            <div class="contact-line"><span class="icon" aria-hidden="true">⌖</span><div><small>Location</small><strong>Asaba, Delta State, Nigeria</strong></div></div>
+            <div class="social-links" aria-label="Social links"><span class="social-placeholder">LinkedIn link — add profile URL</span><span class="social-placeholder">Social link — add URL</span></div>
+          </div>
+          <!-- This form opens the visitor's email app; it does not store or transmit data to a server. -->
+          <form class="contact-form" id="contactForm">
+            <div class="form-grid">
+              <div class="field"><label for="name">Your name</label><input id="name" name="name" autocomplete="name" placeholder="Jane Smith" required></div>
+              <div class="field"><label for="email">Your email</label><input id="email" name="email" type="email" autocomplete="email" placeholder="jane@example.com" required></div>
+              <div class="field field-wide"><label for="subject">Subject</label><input id="subject" name="subject" placeholder="How can I help?" required></div>
+              <div class="field field-wide"><label for="message">Message</label><textarea id="message" name="message" placeholder="Write your message..." required></textarea></div>
+            </div>
+            <button class="button button-primary" type="submit">Prepare email <span aria-hidden="true">↗</span></button>
+            <p class="form-note">Your email app will open with the message ready to send.</p>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer><div class="container footer-row"><p>© <span id="year"></span> Omile Peter Nkwaonye. All rights reserved.</p><a href="#top">Back to top ↑</a></div></footer>
+  <script>
+    // Theme preference is saved locally in this browser.
+    const root = document.documentElement;
+    const themeButton = document.getElementById('themeToggle');
+    const savedTheme = localStorage.getItem('omile-theme');
+    if (savedTheme === 'dark') root.dataset.theme = 'dark';
+    function updateThemeButton() {
+      const dark = root.dataset.theme === 'dark';
+      themeButton.textContent = dark ? '☀ Light' : '☾ Dark';
+      themeButton.setAttribute('aria-label', dark ? 'Switch to light mode' : 'Switch to dark mode');
+    }
+    updateThemeButton();
+    themeButton.addEventListener('click', () => {
+      const dark = root.dataset.theme !== 'dark';
+      if (dark) root.dataset.theme = 'dark'; else delete root.dataset.theme;
+      localStorage.setItem('omile-theme', dark ? 'dark' : 'light');
+      updateThemeButton();
+    });
+    document.getElementById('year').textContent = new Date().getFullYear();
+    const revealObserver = new IntersectionObserver(entries => {
+      entries.forEach(entry => { if (entry.isIntersecting) { entry.target.classList.add('visible'); revealObserver.unobserve(entry.target); } });
+    }, { threshold: .12 });
+    document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
+    // Accessible project carousel: pauses on hover, focus and manual navigation.
+    const slidesTrack = document.getElementById('slidesTrack');
+    const slides = [...slidesTrack.querySelectorAll('.slide')];
+    const dotsRoot = document.getElementById('slideDots');
+    const slideStatus = document.getElementById('slideStatus');
+    const previousSlide = document.getElementById('previousSlide');
+    const nextSlide = document.getElementById('nextSlide');
+    const pauseSlides = document.getElementById('pauseSlides');
+    const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    let currentSlide = 0;
+    let slideshowTimer;
+    let slideshowPaused = reducedMotion;
+    slides.forEach((slide, index) => {
+      slide.setAttribute('aria-hidden', index === 0 ? 'false' : 'true');
+      slide.inert = index !== 0;
+      const dot = document.createElement('button');
+      dot.type = 'button'; dot.className = 'slide-dot';
+      dot.setAttribute('aria-label', `Show project ${index + 1}`);
+      dot.setAttribute('aria-current', index === 0 ? 'true' : 'false');
+      dot.addEventListener('click', () => { pauseSlideshow(); showSlide(index); });
+      dotsRoot.append(dot);
+    });
+    const slideDots = [...dotsRoot.querySelectorAll('.slide-dot')];
+    function showSlide(index) {
+      currentSlide = (index + slides.length) % slides.length;
+      slidesTrack.style.transform = `translateX(-${currentSlide * 100}%)`;
+      slides.forEach((slide, i) => slide.setAttribute('aria-hidden', i === currentSlide ? 'false' : 'true'));
+      slides.forEach((slide, i) => { slide.inert = i !== currentSlide; });
+      slideDots.forEach((dot, i) => dot.setAttribute('aria-current', i === currentSlide ? 'true' : 'false'));
+      slideStatus.textContent = `${currentSlide + 1} / ${slides.length}`;
+    }
+    function pauseSlideshow() {
+      slideshowPaused = true; clearInterval(slideshowTimer);
+      pauseSlides.textContent = '▶'; pauseSlides.setAttribute('aria-label', 'Start slideshow'); pauseSlides.setAttribute('aria-pressed', 'true');
+    }
+    function startSlideshow() {
+      if (reducedMotion) return;
+      slideshowPaused = false; clearInterval(slideshowTimer);
+      slideshowTimer = setInterval(() => showSlide(currentSlide + 1), 6500);
+      pauseSlides.textContent = 'Ⅱ'; pauseSlides.setAttribute('aria-label', 'Pause slideshow'); pauseSlides.setAttribute('aria-pressed', 'false');
+    }
+    previousSlide.addEventListener('click', () => { pauseSlideshow(); showSlide(currentSlide - 1); });
+    nextSlide.addEventListener('click', () => { pauseSlideshow(); showSlide(currentSlide + 1); });
+    pauseSlides.addEventListener('click', () => slideshowPaused ? startSlideshow() : pauseSlideshow());
+    const slideshow = document.querySelector('.slideshow');
+    if (reducedMotion) pauseSlides.hidden = true;
+    slideshow.addEventListener('mouseenter', pauseSlideshow);
+    slideshow.addEventListener('focusin', pauseSlideshow);
+    if (!reducedMotion) startSlideshow();
+    const sections = [...document.querySelectorAll('main section[id]')];
+    const navLinks = [...document.querySelectorAll('.nav-links a')];
+    const sectionObserver = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (!entry.isIntersecting) return;
+        navLinks.forEach(link => link.classList.toggle('active', link.getAttribute('href') === `#${entry.target.id}`));
+      });
+    }, { rootMargin: '-30% 0px -60% 0px' });
+    sections.forEach(section => sectionObserver.observe(section));
+    document.getElementById('contactForm').addEventListener('submit', event => {
+      event.preventDefault();
+      const data = new FormData(event.currentTarget);
+      const subject = encodeURIComponent(data.get('subject'));
+      const body = encodeURIComponent(`From: ${data.get('name')} (${data.get('email')})\n\n${data.get('message')}`);
+      window.location.href = `mailto:Omilepeter24@gmail.com?subject=${subject}&body=${body}`;
+    });
+  </script>
+</body>
+</html>
